@@ -2,21 +2,21 @@
 
 This function receives a file descriptor, for each call it attempts to read one line from it and returns a string allocated with malloc. If it fails or there's nothing to read it returns a null pointer.
 
-get_next_line reads in blocks of BUFFER_SIZE. If there's a piece of string that should not be returned (e.g "hello\nword" will return "hello\n", but it might consume the whole string from the source if BUFFER_SIZE is too big), it's saved on static memory for future calls.
+get_next_line reads in blocks of BUFFER_SIZE.
 
-The 'bonus' should make get_next_line be able to read from multiple files descriptors in any order.
+get_next_line should be able to read from multiple files descriptors in any order.
 
-To fully understand the scope of this project, I invite you to read the subject.
+More information [get_next_line.pdf](https://github.com/Kevin-Seligmann/get_next_line/blob/main/get_next_line.pdf)
 
-To learn about the styleguide we need to follow, I invite you to read the [Norminette](https://github.com/42School/norminette). 
+Styleguide [Norminette](https://github.com/42School/norminette)
 
-# Compilation
+# Usage
 
-This function has been tested with 'CC' compiler. One might change the value of BUFFER SIZE by compiling with -D.
+It's advisable to use this function along with [libft](https://github.com/Kevin-Seligmann/libft/)
 
-e.g: cc -Wall -Wextra -Werror -D BUFFER_SIZE=1 get_next_line.c get_next_line_utils.c main.c
+One should be able to use this as any other regular C function.
 
-The original project was written for Mac and works for Debian and Ubuntu.
+Use the flag ´-D BUFFER_SIZE=N´ to change the read buffer size. 
 
 ## 42
 
